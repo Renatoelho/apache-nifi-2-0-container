@@ -1,0 +1,335 @@
+[
+    {
+        "Id": "4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a",
+        "Created": "2024-07-13T00:54:44.834336673Z",
+        "Path": "../scripts/start.sh",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 99306,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-07-13T00:54:45.446560855Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:5061922e67b7b008640b69c3703aa1a32abd59923c566f46613dfde972368e59",
+        "ResolvConfPath": "/var/lib/docker/containers/4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a/hostname",
+        "HostsPath": "/var/lib/docker/containers/4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a/hosts",
+        "LogPath": "/var/lib/docker/containers/4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a/4a47d7d2d1872c6431a122c2cf898d38dc88e8b62f4f3a3942794e6b88326f7a-json.log",
+        "Name": "/nifi",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8443/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8443"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                12,
+                76
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/8a916c6024667a902227b8dd88b4efc50be67c5ff2911bafd7f8d393df78a5fb-init/diff:/var/lib/docker/overlay2/dd4728bd5abdf551e73fff64011fb4c81ffb4b4c6cebc3a614651a8398e2bf9b/diff:/var/lib/docker/overlay2/52c32156fe162fdf981fb02270d4642c99ab8373049af8ed08dee55f99eec0db/diff:/var/lib/docker/overlay2/d6c6d69e18b3ae3fa9e22d41a75928c9fabc23be32083bc9e219ab2c35220876/diff:/var/lib/docker/overlay2/1b8326274e5a6829c45a61f902a786b575cb739986b43bf6ef85e79f64fa0f04/diff:/var/lib/docker/overlay2/40ea55adb84cfa866ed293bc6493330461b75c96b54b9d76def23cdce81413e2/diff:/var/lib/docker/overlay2/f57bc999fe973493c5a6f9f84eb42326fd922c35a585dd9cb3ac31f072fc0b14/diff:/var/lib/docker/overlay2/be02e95d71cb4421f4945ffbaf27c0484db98f8a976880de799c76fbe2174a3c/diff:/var/lib/docker/overlay2/07de06b0da7a00926fd7b4571c51a445dd112562c93ba183c86fcf938397d7a5/diff:/var/lib/docker/overlay2/acdc4fb7a5c96a19fba164c870bcc7524fc49559ce8092b36ebd7aa9e10abfd9/diff:/var/lib/docker/overlay2/46bf10476d5264b373d3eef7ce93143d7ffe06e85aade70eaf26407cbe883161/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8a916c6024667a902227b8dd88b4efc50be67c5ff2911bafd7f8d393df78a5fb/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8a916c6024667a902227b8dd88b4efc50be67c5ff2911bafd7f8d393df78a5fb/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8a916c6024667a902227b8dd88b4efc50be67c5ff2911bafd7f8d393df78a5fb/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "1d7d0bceec0fa06e05d6a5959a45e3c3e0df21bc4ead2d39275df43062237633",
+                "Source": "/var/lib/docker/volumes/1d7d0bceec0fa06e05d6a5959a45e3c3e0df21bc4ead2d39275df43062237633/_data",
+                "Destination": "/opt/nifi/nifi-current/python_extensions",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "fc185821d629312607c6be83e03388791c4cce45bfaac4afe48c85c9205a0d17",
+                "Source": "/var/lib/docker/volumes/fc185821d629312607c6be83e03388791c4cce45bfaac4afe48c85c9205a0d17/_data",
+                "Destination": "/opt/nifi/nifi-current/state",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "253515f1b35a14d55195329e3f5ec5905f3ae6a8c062182dcac3e5e4cb2e7b59",
+                "Source": "/var/lib/docker/volumes/253515f1b35a14d55195329e3f5ec5905f3ae6a8c062182dcac3e5e4cb2e7b59/_data",
+                "Destination": "/opt/nifi/nifi-current/database_repository",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "6973537c578fda2ba403a7dd8275bf3fb6c01b0c4bce21c84eb5ca2c973f1547",
+                "Source": "/var/lib/docker/volumes/6973537c578fda2ba403a7dd8275bf3fb6c01b0c4bce21c84eb5ca2c973f1547/_data",
+                "Destination": "/opt/nifi/nifi-current/flowfile_repository",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "cab5646e6ec47800c47b320fdd8a80d2cadff073fce75882b574532e35938826",
+                "Source": "/var/lib/docker/volumes/cab5646e6ec47800c47b320fdd8a80d2cadff073fce75882b574532e35938826/_data",
+                "Destination": "/opt/nifi/nifi-current/nar_extensions",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "c4060e0aefe1c54930b0ba288145d0ba8673879555069363fc2204c925f5a819",
+                "Source": "/var/lib/docker/volumes/c4060e0aefe1c54930b0ba288145d0ba8673879555069363fc2204c925f5a819/_data",
+                "Destination": "/opt/nifi/nifi-current/logs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "dead8769b8f760f0bcafccf14ffbfe79dceb68e39b5d3db8a51078a57d67f6df",
+                "Source": "/var/lib/docker/volumes/dead8769b8f760f0bcafccf14ffbfe79dceb68e39b5d3db8a51078a57d67f6df/_data",
+                "Destination": "/opt/nifi/nifi-current/provenance_repository",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "fcb5a8cfacfbe094e3225c3d95bfdc0322426c661fd509c7886d4100a2766de1",
+                "Source": "/var/lib/docker/volumes/fcb5a8cfacfbe094e3225c3d95bfdc0322426c661fd509c7886d4100a2766de1/_data",
+                "Destination": "/opt/nifi/nifi-current/conf",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "700f5c1e48850d186c8aee5024a3af3b0de16a01d7dc86f8c198a9a2f0ec018b",
+                "Source": "/var/lib/docker/volumes/700f5c1e48850d186c8aee5024a3af3b0de16a01d7dc86f8c198a9a2f0ec018b/_data",
+                "Destination": "/opt/nifi/nifi-current/content_repository",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "4a47d7d2d187",
+            "Domainname": "",
+            "User": "nifi",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "10000/tcp": {},
+                "8000/tcp": {},
+                "8443/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "SINGLE_USER_CREDENTIALS_USERNAME=admin",
+                "SINGLE_USER_CREDENTIALS_PASSWORD=nifi+python+extension",
+                "PATH=/usr/lib/jvm/jdk-21.0.3-bellsoft-x86_64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "JAVA_HOME=/usr/lib/jvm/jdk-21.0.3-bellsoft-x86_64",
+                "NIFI_BASE_DIR=/opt/nifi",
+                "NIFI_HOME=/opt/nifi/nifi-current",
+                "NIFI_TOOLKIT_HOME=/opt/nifi/nifi-toolkit-current",
+                "NIFI_PID_DIR=/opt/nifi/nifi-current/run",
+                "NIFI_LOG_DIR=/opt/nifi/nifi-current/logs"
+            ],
+            "Cmd": null,
+            "Image": "apache/nifi:2.0.0-M4",
+            "Volumes": {
+                "/opt/nifi/nifi-current/conf": {},
+                "/opt/nifi/nifi-current/content_repository": {},
+                "/opt/nifi/nifi-current/database_repository": {},
+                "/opt/nifi/nifi-current/flowfile_repository": {},
+                "/opt/nifi/nifi-current/logs": {},
+                "/opt/nifi/nifi-current/nar_extensions": {},
+                "/opt/nifi/nifi-current/provenance_repository": {},
+                "/opt/nifi/nifi-current/python_extensions": {},
+                "/opt/nifi/nifi-current/state": {}
+            },
+            "WorkingDir": "/opt/nifi/nifi-current",
+            "Entrypoint": [
+                "../scripts/start.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "Apache NiFi <dev@nifi.apache.org>",
+                "site": "https://nifi.apache.org"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "341dc335456346863d34f6da55c074f39f55d968a7e40972c009b050f8cb3ef5",
+            "SandboxKey": "/var/run/docker/netns/341dc3354563",
+            "Ports": {
+                "10000/tcp": null,
+                "8000/tcp": null,
+                "8443/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8443"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8443"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "d37cdc3209952ec88afd9562f2897e26e6ee4b7970ccee03e32929e8f22022ee",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null,
+                    "NetworkID": "eac40faf8292e0a7f58151a7773622c9a2578f23b5df42694bf87fd47d623d23",
+                    "EndpointID": "d37cdc3209952ec88afd9562f2897e26e6ee4b7970ccee03e32929e8f22022ee",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]

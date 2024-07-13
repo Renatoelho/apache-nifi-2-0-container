@@ -1,0 +1,54 @@
+
+services: 
+  apache-nifi-2:
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=nifi
+      - SINGLE_USER_CREDENTIALS_PASSWORD=HGd15bvfv8744ghbdhgdv7895agqERAo
+      - TZ=America/Sao_Paulo
+    image: apache/nifi:2.0.0-M4
+    container_name: apache-nifi-2
+    ports:
+      - "8443:8443"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.95"
+          memory: 4G
+    restart: on-failure
+    volumes: 
+      - nifi-python:/opt/nifi/nifi-current/python_extensions
+      - nifi-conf:/opt/nifi/nifi-current/conf
+      - nifi-content:/opt/nifi/nifi-current/content_repository
+      - nifi-database:/opt/nifi/nifi-current/database_repository
+      - nifi-flowfile:/opt/nifi/nifi-current/flowfile_repository
+      - nifi-logs:/opt/nifi/nifi-current/logs
+      - nifi-nar:/opt/nifi/nifi-current/nar_extensions
+      - nifi-provenance:/opt/nifi/nifi-current/provenance_repository
+      - nifi-state:/opt/nifi/nifi-current/state
+    networks:
+      - nifi-network
+
+volumes:
+    nifi-python:
+    nifi-conf:
+    nifi-content:
+    nifi-database:
+    nifi-flowfile:
+    nifi-logs:
+    nifi-nar:
+    nifi-provenance:
+    nifi-state:
+
+networks:
+  nifi-network:
+    driver: bridge
+
+# docker compose -p apache-nifi-2 -f docker-compose.yaml up -d
+# docker compose -p apache-nifi-2 -f docker-compose.yaml restart
+# sudo chmod -R 777 ./nifi
+# https://localhost:8443/nifi/#/login
+# https://github.com/joewitt/nifi-python-examples/blob/main/UpdateAttributeFileLookup.py
+# https://github.com/apache/nifi-python-extensions/tree/main/src/extensions
+
+# /var/lib/docker/volumes/apache-nifi-2_nifi-python/_data
+
