@@ -1,10 +1,10 @@
 from nifiapi.flowfiletransform import FlowFileTransform, FlowFileTransformResult
 
-class descobreColunasArquivo(FlowFileTransform):
+class descobreColunasArquivo2(FlowFileTransform):
     class Java:
         implements = ["org.apache.nifi.python.processor.FlowFileTransform"]
     class ProcessorDetails:
-        version = "0.0.1-Python"
+        version = "0.0.2-Python"
         description = """Esse processo descobre as colunas existentes em um arquivo de texto separado por ponto e vírgula. """
         tags = ["pandas", "python", "outros..."]
 

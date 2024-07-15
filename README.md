@@ -10,6 +10,17 @@
 # https://github.com/apache/nifi-python-extensions/tree/main/src/extensions
 
 # /var/lib/docker/volumes/apache-nifi-2_nifi-python/_data
+
+# Local onde são criados os ambientes virtuais dos novos processos
+
+./work/python/extensions/descobreColunasArquivo/0.0.1-Python/
+./work/python/extensions/descobreColunasArquivo2/0.0.2-Python
+
+# Comando para ver os logs de criação dos processos Python
+
+docker logs apache-nifi-2 | grep -Ei descobreColunasArquivo
+
+
 -->
 
 ```bash
