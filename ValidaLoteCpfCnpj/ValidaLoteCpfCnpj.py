@@ -23,7 +23,7 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
         name = "Tipo documento",
         description = "Escolha o tipo documento que será validado",
         allowable_values = ["CPF", "CNPJ"],
-        default_value="CPF",
+        default_value = "CPF",
         validators = [StandardValidators.NON_EMPTY_VALIDATOR],
         required = True
     )
