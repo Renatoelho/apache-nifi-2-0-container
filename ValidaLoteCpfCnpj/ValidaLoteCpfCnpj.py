@@ -60,14 +60,14 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
             .evaluateAttributeExpressions(flowfile)
             .getValue()
         )
-        input = (
+        conteudo = (
             flowfile
             .getContentsAsBytes()
             .decode()
         )
-        data_io = StringIO(input)
+        conteudo_io = StringIO(conteudo)
         df_base = pd.read_csv(
-            data_io,
+            conteudo_io,
             sep=";",
             dtype="str"
         )
