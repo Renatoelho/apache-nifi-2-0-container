@@ -1,10 +1,13 @@
-from nifiapi.flowfiletransform import FlowFileTransform, FlowFileTransformResult
-from nifiapi.properties import PropertyDescriptor, StandardValidators
 
+from nifiapi.properties import PropertyDescriptor
+from nifiapi.properties import StandardValidators
+from nifiapi.flowfiletransform import FlowFileTransform
+from nifiapi.flowfiletransform import FlowFileTransformResult
 
 class ValidaLoteCpfCnpj(FlowFileTransform):
     class Java:
         implements = ["org.apache.nifi.python.processor.FlowFileTransform"]
+
     class ProcessorDetails:
         version = "0.0.1-Python"
         description = """
@@ -17,11 +20,11 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
         tags = ["CPF", "CNPJ", "Validador", "Lote"]
 
     VALIDADOR = PropertyDescriptor(
-        name="Tipo documento",
-        description="Escolha o tipo documento que será validado",
-        allowable_values=["CPF", "CNPJ"],
-        validators=[StandardValidators.NON_EMPTY_VALIDATOR],
-        required=True
+        name = "Tipo documento",
+        description = "Escolha o tipo documento que será validado",
+        allowable_values = ["CPF", "CNPJ"],
+        validators = [StandardValidators.NON_EMPTY_VALIDATOR],
+        required = True
     )
 
     property_descriptors = [
@@ -33,12 +36,14 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
 
     def getPropertyDescriptors(self):
         return self.property_descriptors
-    
+
     def getDynamicPropertyDescriptor(self, propertyname):
-        return PropertyDescriptor(name=propertyname,
-            description="Uma propriedade definida pelo usuário",
-            validators=[StandardValidators.NON_EMPTY_VALIDATOR],
-            dynamic=True)
+        return PropertyDescriptor(
+            name = propertyname,
+            description = "Uma propriedade definida pelo usuário",
+            validators = [StandardValidators.NON_EMPTY_VALIDATOR],
+            dynamic = True
+        )
 
     def transform(self, context, flowfile):
         from io import StringIO
@@ -76,7 +81,7 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
         df_base = df_base.to_csv(index=False, sep=";")
 
         return FlowFileTransformResult(
-          relationship = "success",
-          contents = df_base,
-          attributes = {"mime.type": "text/csv"}
+            relationship = "success",
+            contents = df_base,
+            attributes = {"mime.type": "text/csv"}
         )

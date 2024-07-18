@@ -49,6 +49,7 @@ def valida_cnpj(num: str) -> bool:
     except Exception:
         return False
 
+
 if __name__ == "__main__":
     num_cnpj = "00.000.000/0001-91"
     if valida_cnpj(num_cnpj):

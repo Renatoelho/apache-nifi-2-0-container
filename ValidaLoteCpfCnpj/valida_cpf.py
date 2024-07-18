@@ -47,6 +47,7 @@ def valida_cpf(num: str) -> bool:
     except Exception:
         return False
 
+
 if __name__ == "__main__":
     num_cpf = "000.000.001-91"
     if valida_cpf(num_cpf):
