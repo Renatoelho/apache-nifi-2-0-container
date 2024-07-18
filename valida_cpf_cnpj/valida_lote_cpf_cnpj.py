@@ -1,3 +1,0 @@
-
-class validaLoteCpfCnpj:
-    pass

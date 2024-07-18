@@ -6,10 +6,13 @@ def valida_cpf(num: str) -> bool:
     Exemplos: '000.000.001-91', '00000000191' ou '191'
     Referência: https://www.macoratti.net/alg_cpf.htm
     """
-    num = sub(r"[^0-9]", "", num).zfill(11)
-    radical = list(num)[:-2]
-    dv = list(num)[-2:]
     try:
+        num = sub(r"[^0-9]", "", num)
+        if not num.isdigit():
+            raise ValueError("num inválido!")
+        num = num.zfill(11)
+        radical = list(num)[:-2]
+        dv = list(num)[-2:]
         num_cal = 10
         soma1 = 0
         for x in radical:

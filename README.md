@@ -10,7 +10,7 @@
 # https://github.com/apache/nifi-python-extensions/tree/main/src/extensions
 # https://nifi.apache.org/documentation/nifi-2.0.0-M4/html/python-developer-guide.html
 
-# /var/lib/docker/volumes/apache-nifi-2_nifi-python/_data
+# sudo cp -r  ValidaLoteCpfCnpj/ /var/lib/docker/volumes/apache-nifi-2_nifi-python/_data
 
 # Local onde são criados os ambientes virtuais dos novos processos
 

@@ -1,3 +1,0 @@
-nome;idade;altura
-maria;21;1.65
-joão;45;1.71
