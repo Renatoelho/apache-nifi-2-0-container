@@ -51,38 +51,60 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
 
         import pandas as pd
 
+        from renomeia_lote import renomeia_lote
         from valida_cpf import valida_cpf
         from valida_cnpj import valida_cnpj
 
-        opcao_documento = (
-            context
-            .getProperty(self.VALIDADOR)
-            .evaluateAttributeExpressions(flowfile)
-            .getValue()
-        )
-        conteudo = (
-            flowfile
-            .getContentsAsBytes()
-            .decode()
-        )
-        conteudo_io = StringIO(conteudo)
-        df_base = pd.read_csv(
-            conteudo_io,
-            sep=";",
-            dtype="str"
-        )
+        try:
+            opcao_documento = (
+                context
+                .getProperty(self.VALIDADOR)
+                .evaluateAttributeExpressions(flowfile)
+                .getValue()
+            )
+            conteudo = (
+                flowfile
+                .getContentsAsBytes()
+                .decode()
+            )
+            conteudo_io = StringIO(conteudo)
+            df_base = pd.read_csv(
+                conteudo_io,
+                sep=";",
+                dtype="str"
+            )
 
-        if opcao_documento == "CPF":
-            df_base.columns = ["CPF"]
-            df_base["STATUS"] = df_base["CPF"].apply(valida_cpf)
-        else:
-            df_base.columns = ["CNPJ"]
-            df_base["STATUS"] = df_base["CNPJ"].apply(valida_cnpj)
+            if opcao_documento == "CPF":
+                df_base.columns = ["CPF"]
+                df_base["STATUS"] = df_base["CPF"].apply(valida_cpf)
+            else:
+                df_base.columns = ["CNPJ"]
+                df_base["STATUS"] = df_base["CNPJ"].apply(valida_cnpj)
 
-        df_base = df_base.to_csv(index=False, sep=";")
+            df_base = df_base.to_csv(index=False, sep=";")
 
-        return FlowFileTransformResult(
-            relationship = "success",
-            contents = df_base,
-            attributes = {"mime.type": "text/csv"}
-        )
+            atributos = (
+                {
+                    "mime.type": "text/csv",
+                    "filename": renomeia_lote()  
+                }
+            )
+
+            return FlowFileTransformResult(
+                relationship = "success",
+                contents = df_base,
+                attributes = atributos
+            )
+
+        except Exception as erro:
+            atributos = (
+                {
+                    "mime.type": "text/csv",
+                    "filename": renomeia_lote(erro),
+                    "erro": f"{erro}"  
+                }
+            )
+            return FlowFileTransformResult(
+                relationship = "failure",
+                attributes = atributos
+            )
