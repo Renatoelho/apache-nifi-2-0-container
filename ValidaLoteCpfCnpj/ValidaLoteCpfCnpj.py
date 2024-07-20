@@ -11,11 +11,11 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
     class ProcessorDetails:
         version = "0.0.1-Python"
         description = """
-            Este processo é responsável por validar um lote de números
-            de CPF ou CNPJ. O lote deve ser disponibilizado no formato .txt ou
-            .csv com uma única coluna contendo a descrição 'CPF' ou 'CNPJ'.
-            O retorno adicionará uma coluna 'STATUS' com os valores 'True'
-            ou 'False' às informações originais.
+        Este processo é responsável por validar um lote de números
+        de CPF ou CNPJ. O lote deve ser disponibilizado no formato .txt ou
+        .csv com uma única coluna contendo a descrição 'CPF' ou 'CNPJ'.
+        O retorno adicionará uma coluna 'STATUS' com os valores 'True'
+        ou 'False' às informações originais.
         """
         tags = ["CPF", "CNPJ", "Validador", "Lote..."]
 
