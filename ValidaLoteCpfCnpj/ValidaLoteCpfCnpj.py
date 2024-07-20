@@ -11,13 +11,13 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
     class ProcessorDetails:
         version = "0.0.1-Python"
         description = """
-        Esse processo é responsável por validar um lote de números
-        de CPF ou CNPJ. O lote deve ser disponibilizado no formato
-        .txt com uma única coluna contendo a descrição 'CPF' ou 'CNPJ',
-        e o retorno adicionará uma coluna 'STATUS' com os valores 'True'
-        ou 'False' ao arquivo original.
+            Este processo é responsável por validar um lote de números
+            de CPF ou CNPJ. O lote deve ser disponibilizado no formato .txt ou
+            .csv com uma única coluna contendo a descrição 'CPF' ou 'CNPJ'.
+            O retorno adicionará uma coluna 'STATUS' com os valores 'True'
+            ou 'False' às informações originais.
         """
-        tags = ["CPF", "CNPJ", "Validador", "Lote"]
+        tags = ["CPF", "CNPJ", "Validador", "Lote..."]
 
     VALIDADOR = PropertyDescriptor(
         name = "Tipo documento",
@@ -56,6 +56,10 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
         from valida_cnpj import valida_cnpj
 
         try:
+            nome_lote = (
+                flowfile
+                .getAttribute("filename")
+            )
             opcao_documento = (
                 context
                 .getProperty(self.VALIDADOR)
@@ -86,7 +90,7 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
             atributos = (
                 {
                     "mime.type": "text/csv",
-                    "filename": renomeia_lote()  
+                    "filename": renomeia_lote(nome_lote)  
                 }
             )
 
@@ -97,10 +101,14 @@ class ValidaLoteCpfCnpj(FlowFileTransform):
             )
 
         except Exception as erro:
+            nome_lote = (
+                flowfile
+                .getAttribute("filename")
+            )
             atributos = (
                 {
                     "mime.type": "text/csv",
-                    "filename": renomeia_lote(erro),
+                    "filename": nome_lote.strip(),
                     "erro": f"{erro}"  
                 }
             )
