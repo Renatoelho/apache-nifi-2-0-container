@@ -11,7 +11,7 @@ https://www.youtube.com/@renato-coelho
 # Apresentação em vídeo
 
 <p align="center">
-  <a href="https://www.youtube.com/@renato-coelho" target="_blank"><img src="thumbnail/Apache-Nifi-Python.png" alt="Vídeo de apresentação"></a>
+  <a href="https://youtu.be/ZfvkObb7Fhw" target="_blank"><img src="thumbnail/Apache-Nifi-Python.png" alt="Vídeo de apresentação"></a>
 </p>
 
 
