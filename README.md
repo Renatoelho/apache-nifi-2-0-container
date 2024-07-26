@@ -1,4 +1,4 @@
-# Apache NiFi 2: Desenvolva Processadores Personalizados com Python
+# Apache NiFi 2: Construa Processadores com Python
 
 
 A utilização do ***Python*** no ***Apache NiFi 2*** permite que você crie processadores ***personalizados*** para manipular, transformar e analisar dados de forma específica. Isso significa que, além dos processadores padrão que vêm com o NiFi, você pode escrever ***seu próprio código*** Python para realizar tarefas que atendam às suas necessidades específicas de ***processamento de dados***, como filtragem, agregação, enriquecimento ou formatação de dados. Com Python, você ganha ***flexibilidade*** e poder adicional para personalizar como os dados são tratados e processados dentro do seu fluxo, aproveitando a ***simplicidade*** e a vasta gama de bibliotecas disponíveis na ***linguagem***.
